@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A9F5E30952EC72A5776AE2B /* Pods_BasicSequencerAUv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D5019980EF61FD7176E076 /* Pods_BasicSequencerAUv3.framework */; };
+		B201254421469D52006E9D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201254321469D52006E9D1F /* AppDelegate.swift */; };
+		B201254621469D52006E9D1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201254521469D52006E9D1F /* ViewController.swift */; };
+		B201254921469D52006E9D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B201254721469D52006E9D1F /* Main.storyboard */; };
+		B201254B21469D54006E9D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B201254A21469D54006E9D1F /* Assets.xcassets */; };
+		B201254E21469D54006E9D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B201254C21469D54006E9D1F /* LaunchScreen.storyboard */; };
+		B201255D21469DA0006E9D1F /* AUv3AudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = B201255C21469DA0006E9D1F /* AUv3AudioUnit.mm */; };
+		B201255F21469DA0006E9D1F /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201255E21469DA0006E9D1F /* AudioUnitViewController.swift */; };
+		B201256221469DA0006E9D1F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B201256021469DA0006E9D1F /* MainInterface.storyboard */; };
+		B201256721469DA0006E9D1F /* AUv3.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B201255921469DA0006E9D1F /* AUv3.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B201257F21469FD5006E9D1F /* AEWeakRetainingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B201256D21469FD5006E9D1F /* AEWeakRetainingProxy.m */; };
+		B201258021469FD5006E9D1F /* AEMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B201256E21469FD5006E9D1F /* AEMessageQueue.m */; };
+		B201258121469FD5006E9D1F /* AEManagedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B201256F21469FD5006E9D1F /* AEManagedValue.m */; };
+		B201258221469FD5006E9D1F /* AEArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257221469FD5006E9D1F /* AEArray.m */; };
+		B201258321469FD5006E9D1F /* AEUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257421469FD5006E9D1F /* AEUtilities.m */; };
+		B201258421469FD5006E9D1F /* AETime.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257921469FD5006E9D1F /* AETime.m */; };
+		B201258521469FD5006E9D1F /* AETypes.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257B21469FD5006E9D1F /* AETypes.m */; };
+		B201258621469FD5006E9D1F /* AEMainThreadEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257C21469FD5006E9D1F /* AEMainThreadEndpoint.m */; };
+		B201258721469FD5006E9D1F /* AEAudioThreadEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257E21469FD5006E9D1F /* AEAudioThreadEndpoint.m */; };
+		B201258821469FE4006E9D1F /* AEWeakRetainingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B201256D21469FD5006E9D1F /* AEWeakRetainingProxy.m */; };
+		B201258B2146AA6E006E9D1F /* GestureSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201258A2146AA6E006E9D1F /* GestureSlider.swift */; };
+		B24EB79C2178725A00D1D8CC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B24EB79B2178725A00D1D8CC /* libc++.tbd */; };
+		BD6FA243728BF2ACC6C70ABF /* Pods_AUv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DA95E7AF567524597D57A4 /* Pods_AUv3.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B201256521469DA0006E9D1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B201253821469D52006E9D1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B201255821469DA0006E9D1F;
+			remoteInfo = AUv3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B201256B21469DA0006E9D1F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B201256721469DA0006E9D1F /* AUv3.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1043EA1671561FF1785DEE15 /* Pods-AUv3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUv3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AUv3/Pods-AUv3.debug.xcconfig"; sourceTree = "<group>"; };
+		11D5019980EF61FD7176E076 /* Pods_BasicSequencerAUv3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicSequencerAUv3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E9BC4E10224CFD2BFA2094 /* Pods-BasicSequencerAUv3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicSequencerAUv3.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicSequencerAUv3/Pods-BasicSequencerAUv3.release.xcconfig"; sourceTree = "<group>"; };
+		A5735E2162CFAFD4DB12FFAD /* Pods-AUv3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUv3.release.xcconfig"; path = "Pods/Target Support Files/Pods-AUv3/Pods-AUv3.release.xcconfig"; sourceTree = "<group>"; };
+		B201254021469D52006E9D1F /* BasicSequencerAUv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicSequencerAUv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B201254321469D52006E9D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B201254521469D52006E9D1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B201254821469D52006E9D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B201254A21469D54006E9D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B201254D21469D54006E9D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B201254F21469D54006E9D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B201255921469DA0006E9D1F /* AUv3.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AUv3.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B201255B21469DA0006E9D1F /* AUv3AudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUv3AudioUnit.h; sourceTree = "<group>"; };
+		B201255C21469DA0006E9D1F /* AUv3AudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AUv3AudioUnit.mm; sourceTree = "<group>"; };
+		B201255E21469DA0006E9D1F /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		B201256121469DA0006E9D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B201256321469DA0006E9D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B201256421469DA0006E9D1F /* AUv3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AUv3-Bridging-Header.h"; sourceTree = "<group>"; };
+		B201256D21469FD5006E9D1F /* AEWeakRetainingProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEWeakRetainingProxy.m; sourceTree = "<group>"; };
+		B201256E21469FD5006E9D1F /* AEMessageQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMessageQueue.m; sourceTree = "<group>"; };
+		B201256F21469FD5006E9D1F /* AEManagedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManagedValue.m; sourceTree = "<group>"; };
+		B201257021469FD5006E9D1F /* AETime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETime.h; sourceTree = "<group>"; };
+		B201257121469FD5006E9D1F /* AEAudioThreadEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAudioThreadEndpoint.h; sourceTree = "<group>"; };
+		B201257221469FD5006E9D1F /* AEArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEArray.m; sourceTree = "<group>"; };
+		B201257321469FD5006E9D1F /* AEMainThreadEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMainThreadEndpoint.h; sourceTree = "<group>"; };
+		B201257421469FD5006E9D1F /* AEUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEUtilities.m; sourceTree = "<group>"; };
+		B201257521469FD5006E9D1F /* AETypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETypes.h; sourceTree = "<group>"; };
+		B201257621469FD5006E9D1F /* AEWeakRetainingProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEWeakRetainingProxy.h; sourceTree = "<group>"; };
+		B201257721469FD5006E9D1F /* AEManagedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManagedValue.h; sourceTree = "<group>"; };
+		B201257821469FD5006E9D1F /* AEMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMessageQueue.h; sourceTree = "<group>"; };
+		B201257921469FD5006E9D1F /* AETime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETime.m; sourceTree = "<group>"; };
+		B201257A21469FD5006E9D1F /* AEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEUtilities.h; sourceTree = "<group>"; };
+		B201257B21469FD5006E9D1F /* AETypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETypes.m; sourceTree = "<group>"; };
+		B201257C21469FD5006E9D1F /* AEMainThreadEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMainThreadEndpoint.m; sourceTree = "<group>"; };
+		B201257D21469FD5006E9D1F /* AEArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEArray.h; sourceTree = "<group>"; };
+		B201257E21469FD5006E9D1F /* AEAudioThreadEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAudioThreadEndpoint.m; sourceTree = "<group>"; };
+		B201258A2146AA6E006E9D1F /* GestureSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GestureSlider.swift; path = AUv3/GestureSlider.swift; sourceTree = SOURCE_ROOT; };
+		B24EB79B2178725A00D1D8CC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D8DA95E7AF567524597D57A4 /* Pods_AUv3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUv3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32F6FF57736E811FC8A3E51 /* Pods-BasicSequencerAUv3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicSequencerAUv3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicSequencerAUv3/Pods-BasicSequencerAUv3.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B201253D21469D52006E9D1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9F5E30952EC72A5776AE2B /* Pods_BasicSequencerAUv3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B201255621469DA0006E9D1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24EB79C2178725A00D1D8CC /* libc++.tbd in Frameworks */,
+				BD6FA243728BF2ACC6C70ABF /* Pods_AUv3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A14BF452EFA885026C0725F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B24EB79B2178725A00D1D8CC /* libc++.tbd */,
+				D8DA95E7AF567524597D57A4 /* Pods_AUv3.framework */,
+				11D5019980EF61FD7176E076 /* Pods_BasicSequencerAUv3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B201253721469D52006E9D1F = {
+			isa = PBXGroup;
+			children = (
+				B201254221469D52006E9D1F /* BasicSequencerAUv3 */,
+				B201255A21469DA0006E9D1F /* AUv3 */,
+				B201254121469D52006E9D1F /* Products */,
+				C6B9F9794BFFF2FD3E43475F /* Pods */,
+				9A14BF452EFA885026C0725F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B201254121469D52006E9D1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B201254021469D52006E9D1F /* BasicSequencerAUv3.app */,
+				B201255921469DA0006E9D1F /* AUv3.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B201254221469D52006E9D1F /* BasicSequencerAUv3 */ = {
+			isa = PBXGroup;
+			children = (
+				B201254321469D52006E9D1F /* AppDelegate.swift */,
+				B201254521469D52006E9D1F /* ViewController.swift */,
+				B201254721469D52006E9D1F /* Main.storyboard */,
+				B201254A21469D54006E9D1F /* Assets.xcassets */,
+				B201254C21469D54006E9D1F /* LaunchScreen.storyboard */,
+				B201254F21469D54006E9D1F /* Info.plist */,
+			);
+			path = BasicSequencerAUv3;
+			sourceTree = "<group>";
+		};
+		B201255A21469DA0006E9D1F /* AUv3 */ = {
+			isa = PBXGroup;
+			children = (
+				B201255B21469DA0006E9D1F /* AUv3AudioUnit.h */,
+				B201255C21469DA0006E9D1F /* AUv3AudioUnit.mm */,
+				B201258A2146AA6E006E9D1F /* GestureSlider.swift */,
+				B201255E21469DA0006E9D1F /* AudioUnitViewController.swift */,
+				B201256021469DA0006E9D1F /* MainInterface.storyboard */,
+				B201256321469DA0006E9D1F /* Info.plist */,
+				B201256421469DA0006E9D1F /* AUv3-Bridging-Header.h */,
+				B201256C21469FD5006E9D1F /* TAAE */,
+			);
+			path = AUv3;
+			sourceTree = "<group>";
+		};
+		B201256C21469FD5006E9D1F /* TAAE */ = {
+			isa = PBXGroup;
+			children = (
+				B201257621469FD5006E9D1F /* AEWeakRetainingProxy.h */,
+				B201256D21469FD5006E9D1F /* AEWeakRetainingProxy.m */,
+				B201256E21469FD5006E9D1F /* AEMessageQueue.m */,
+				B201256F21469FD5006E9D1F /* AEManagedValue.m */,
+				B201257021469FD5006E9D1F /* AETime.h */,
+				B201257921469FD5006E9D1F /* AETime.m */,
+				B201257121469FD5006E9D1F /* AEAudioThreadEndpoint.h */,
+				B201257E21469FD5006E9D1F /* AEAudioThreadEndpoint.m */,
+				B201257D21469FD5006E9D1F /* AEArray.h */,
+				B201257221469FD5006E9D1F /* AEArray.m */,
+				B201257321469FD5006E9D1F /* AEMainThreadEndpoint.h */,
+				B201257C21469FD5006E9D1F /* AEMainThreadEndpoint.m */,
+				B201257A21469FD5006E9D1F /* AEUtilities.h */,
+				B201257421469FD5006E9D1F /* AEUtilities.m */,
+				B201257521469FD5006E9D1F /* AETypes.h */,
+				B201257B21469FD5006E9D1F /* AETypes.m */,
+				B201257721469FD5006E9D1F /* AEManagedValue.h */,
+				B201257821469FD5006E9D1F /* AEMessageQueue.h */,
+			);
+			path = TAAE;
+			sourceTree = SOURCE_ROOT;
+		};
+		C6B9F9794BFFF2FD3E43475F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1043EA1671561FF1785DEE15 /* Pods-AUv3.debug.xcconfig */,
+				A5735E2162CFAFD4DB12FFAD /* Pods-AUv3.release.xcconfig */,
+				E32F6FF57736E811FC8A3E51 /* Pods-BasicSequencerAUv3.debug.xcconfig */,
+				75E9BC4E10224CFD2BFA2094 /* Pods-BasicSequencerAUv3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B201253F21469D52006E9D1F /* BasicSequencerAUv3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B201255221469D54006E9D1F /* Build configuration list for PBXNativeTarget "BasicSequencerAUv3" */;
+			buildPhases = (
+				BD504B0F0A01DF59C6D33C16 /* [CP] Check Pods Manifest.lock */,
+				B201253C21469D52006E9D1F /* Sources */,
+				B201253D21469D52006E9D1F /* Frameworks */,
+				B201253E21469D52006E9D1F /* Resources */,
+				B201256B21469DA0006E9D1F /* Embed App Extensions */,
+				4095D553DD46724B2B919BFE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B201256621469DA0006E9D1F /* PBXTargetDependency */,
+			);
+			name = BasicSequencerAUv3;
+			productName = BasicSequencerAUv3;
+			productReference = B201254021469D52006E9D1F /* BasicSequencerAUv3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B201255821469DA0006E9D1F /* AUv3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B201256821469DA0006E9D1F /* Build configuration list for PBXNativeTarget "AUv3" */;
+			buildPhases = (
+				B7A714493A1EE307D55B6D3D /* [CP] Check Pods Manifest.lock */,
+				B201255521469DA0006E9D1F /* Sources */,
+				B201255621469DA0006E9D1F /* Frameworks */,
+				B201255721469DA0006E9D1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AUv3;
+			productName = AUv3;
+			productReference = B201255921469DA0006E9D1F /* AUv3.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B201253821469D52006E9D1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = cemolcay;
+				TargetAttributes = {
+					B201253F21469D52006E9D1F = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+					};
+					B201255821469DA0006E9D1F = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+					};
+				};
+			};
+			buildConfigurationList = B201253B21469D52006E9D1F /* Build configuration list for PBXProject "BasicSequencerAUv3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B201253721469D52006E9D1F;
+			productRefGroup = B201254121469D52006E9D1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B201253F21469D52006E9D1F /* BasicSequencerAUv3 */,
+				B201255821469DA0006E9D1F /* AUv3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B201253E21469D52006E9D1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B201254E21469D54006E9D1F /* LaunchScreen.storyboard in Resources */,
+				B201254B21469D54006E9D1F /* Assets.xcassets in Resources */,
+				B201254921469D52006E9D1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B201255721469DA0006E9D1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B201256221469DA0006E9D1F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4095D553DD46724B2B919BFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicSequencerAUv3/Pods-BasicSequencerAUv3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LiveKnob/LiveKnob.framework",
+				"${BUILT_PRODUCTS_DIR}/MIDIEventKit/MIDIEventKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MusicTheorySwift/MusicTheorySwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LiveKnob.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIDIEventKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicTheorySwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicSequencerAUv3/Pods-BasicSequencerAUv3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A714493A1EE307D55B6D3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AUv3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD504B0F0A01DF59C6D33C16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicSequencerAUv3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B201253C21469D52006E9D1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B201254621469D52006E9D1F /* ViewController.swift in Sources */,
+				B201258821469FE4006E9D1F /* AEWeakRetainingProxy.m in Sources */,
+				B201254421469D52006E9D1F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B201255521469DA0006E9D1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B201258421469FD5006E9D1F /* AETime.m in Sources */,
+				B201255D21469DA0006E9D1F /* AUv3AudioUnit.mm in Sources */,
+				B201258221469FD5006E9D1F /* AEArray.m in Sources */,
+				B201258121469FD5006E9D1F /* AEManagedValue.m in Sources */,
+				B201258B2146AA6E006E9D1F /* GestureSlider.swift in Sources */,
+				B201257F21469FD5006E9D1F /* AEWeakRetainingProxy.m in Sources */,
+				B201258721469FD5006E9D1F /* AEAudioThreadEndpoint.m in Sources */,
+				B201258621469FD5006E9D1F /* AEMainThreadEndpoint.m in Sources */,
+				B201258321469FD5006E9D1F /* AEUtilities.m in Sources */,
+				B201255F21469DA0006E9D1F /* AudioUnitViewController.swift in Sources */,
+				B201258521469FD5006E9D1F /* AETypes.m in Sources */,
+				B201258021469FD5006E9D1F /* AEMessageQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B201256621469DA0006E9D1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B201255821469DA0006E9D1F /* AUv3 */;
+			targetProxy = B201256521469DA0006E9D1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B201254721469D52006E9D1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B201254821469D52006E9D1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B201254C21469D54006E9D1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B201254D21469D54006E9D1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B201256021469DA0006E9D1F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B201256121469DA0006E9D1F /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B201255021469D54006E9D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B201255121469D54006E9D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B201255321469D54006E9D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E32F6FF57736E811FC8A3E51 /* Pods-BasicSequencerAUv3.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = BasicSequencerAUv3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.BasicSequencerAUv3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B201255421469D54006E9D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E9BC4E10224CFD2BFA2094 /* Pods-BasicSequencerAUv3.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = BasicSequencerAUv3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.BasicSequencerAUv3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B201256921469DA0006E9D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1043EA1671561FF1785DEE15 /* Pods-AUv3.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = AUv3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.BasicSequencerAUv3.AUv3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AUv3/AUv3-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B201256A21469DA0006E9D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5735E2162CFAFD4DB12FFAD /* Pods-AUv3.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77Y3N48SNF;
+				INFOPLIST_FILE = AUv3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemolcay.BasicSequencerAUv3.AUv3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AUv3/AUv3-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B201253B21469D52006E9D1F /* Build configuration list for PBXProject "BasicSequencerAUv3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B201255021469D54006E9D1F /* Debug */,
+				B201255121469D54006E9D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B201255221469D54006E9D1F /* Build configuration list for PBXNativeTarget "BasicSequencerAUv3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B201255321469D54006E9D1F /* Debug */,
+				B201255421469D54006E9D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B201256821469DA0006E9D1F /* Build configuration list for PBXNativeTarget "AUv3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B201256921469DA0006E9D1F /* Debug */,
+				B201256A21469DA0006E9D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B201253821469D52006E9D1F /* Project object */;
+}

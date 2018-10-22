@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Unit View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AudioUnitViewController" customModule="AUv3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WJx-yd-4ex"/>
+                        <viewControllerLayoutGuide type="bottom" id="QJ7-Xg-J7A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-qb-oBe">
+                                <rect key="frame" x="8" y="28" width="359" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Qp9-7K-3tD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-pQ-m8C">
+                                <rect key="frame" x="8" y="57" width="359" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="1/2"/>
+                                    <segment title="1/4"/>
+                                    <segment title="1/8"/>
+                                    <segment title="1/16"/>
+                                </segments>
+                                <connections>
+                                    <action selector="noteValueSegmentDidChangeWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="cd4-LJ-U9d"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I0e-pQ-m8C" firstAttribute="top" secondItem="ahF-qb-oBe" secondAttribute="bottom" constant="8" id="0ub-Rp-Lwa"/>
+                            <constraint firstAttribute="trailing" secondItem="ahF-qb-oBe" secondAttribute="trailing" constant="8" id="Jxx-xq-OPz"/>
+                            <constraint firstAttribute="trailing" secondItem="I0e-pQ-m8C" secondAttribute="trailing" constant="8" id="R00-fy-xE8"/>
+                            <constraint firstItem="I0e-pQ-m8C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="RqE-1q-y9l"/>
+                            <constraint firstItem="ahF-qb-oBe" firstAttribute="top" secondItem="WJx-yd-4ex" secondAttribute="bottom" constant="8" id="mKh-Y0-R9d"/>
+                            <constraint firstItem="ahF-qb-oBe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="yKx-l5-RGT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteValueSegment" destination="I0e-pQ-m8C" id="EBg-oQ-1HF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.40000000000001" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+</document>
