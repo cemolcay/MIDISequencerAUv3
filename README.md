@@ -2,7 +2,7 @@
 
 A great start point for the making AUv3 MIDI sequencer apps.
 
-### Key Consepts
+### Key Concepts
 * Swift/Storyboard for UI
 * Objective-C for Audio Unit
 * C++ for DSP (MIDI Sequencing)
