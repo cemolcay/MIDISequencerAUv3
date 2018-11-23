@@ -1,11 +1,11 @@
 PODS:
-  - AudioKit (4.5.2):
-    - AudioKit/Core (= 4.5.2)
-    - AudioKit/UI (= 4.5.2)
-  - AudioKit/Core (4.5.2)
-  - AudioKit/UI (4.5.2):
+  - AudioKit (4.5.4):
+    - AudioKit/Core (= 4.5.4)
+    - AudioKit/UI (= 4.5.4)
+  - AudioKit/Core (4.5.4)
+  - AudioKit/UI (4.5.4):
     - AudioKit/Core
-  - LiveKnob (0.0.2)
+  - LiveKnob (0.0.3)
   - MIDIEventKit (0.0.2)
   - MusicTheorySwift (1.1.0)
 
@@ -23,11 +23,11 @@ SPEC REPOS:
     - MusicTheorySwift
 
 SPEC CHECKSUMS:
-  AudioKit: af6770360f1d8b2aed16ce2802dafe69f0e592d0
-  LiveKnob: c3652c8754431f5bd8ae8e4df6ed4fcd58f3dd3d
+  AudioKit: af3f5b73e22f85f3cd03076fea8afbb9658f0938
+  LiveKnob: 039d0f04b010899c66bcc5386f41243ee8d084c1
   MIDIEventKit: 079f8a6b67cd9f46f4513fa86d79cdb3c490b3f3
   MusicTheorySwift: 555d61fc174c36c7cb1a41cf20b54628ba6b3e32
 
-PODFILE CHECKSUM: 74e7c7776a54c6d5f8dfe45a6f5b8cd88d7f4d08
+PODFILE CHECKSUM: c611218d2bc37cff388749415f1c3ea1a327b677
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.0.beta.2
