@@ -7,3 +7,4 @@
 //
 
 #import "AUv3AudioUnit.h"
+#import "SequencerStepData.h"

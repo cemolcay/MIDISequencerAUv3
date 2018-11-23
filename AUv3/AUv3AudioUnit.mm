@@ -8,6 +8,7 @@
 
 #import "AUv3AudioUnit.h"
 #import <AVFoundation/AVFoundation.h>
+#import "SequencerStepData.h"
 #include "vector"
 
 #define PLAYING_NOTE_CAPACITY 100
@@ -59,9 +60,14 @@ AUScheduleMIDIEventBlock _scheduleMIDIEventBlock;
 
   isPlaying = false;
   nextBeatPosition = 0;
-  
+
   self.sequencer = [[AEArray alloc] init];
-  [self.sequencer updateWithContentsOfArray:@[@60, @64, @67, @70]];
+  [self.sequencer updateWithContentsOfArray:@[
+    [[SequencerStepData alloc] initWithMidiNote:60],
+    [[SequencerStepData alloc] initWithMidiNote:64],
+    [[SequencerStepData alloc] initWithMidiNote:67],
+    [[SequencerStepData alloc] initWithMidiNote:70],
+  ]];
 
   self.sequencerStepIndex = [[AEManagedValue alloc] init];
   self.sequencerStepIndex.objectValue = @0;
@@ -302,12 +308,30 @@ double getBeatRate(int index) {
 
     // Play the beat.
     int stepIndex = [(NSNumber *)_sequencerStepIndex.objectValue intValue];
-    uint8_t midiNote = [(__bridge NSNumber *)AEArrayGetItem(AEArrayGetToken(_sequencer), stepIndex) unsignedIntValue];
+    SequencerStepData *stepData = (__bridge  SequencerStepData*)AEArrayGetItem(AEArrayGetToken(_sequencer), stepIndex);
+
+    // note on
     uint8_t noteOn[3];
     noteOn[0] = 0x90;
-    noteOn[1] = midiNote;
-    noteOn[2] = 90;
+    noteOn[1] = stepData.midiNote;
+    noteOn[2] = stepData.velocity;
     midiOutputCapture(AUEventSampleTimeImmediate, 0, 3, noteOn);
+
+    // modulation
+    uint8_t modulation[3];
+    modulation[0] = 176; // CC
+    modulation[1] = 1; // MOD Wheel
+    modulation[2] = stepData.modulation; // MOD value
+    midiOutputCapture(AUEventSampleTimeImmediate, 0, 3, modulation);
+
+    // pitch bend
+    uint8_t pitchBend[3];
+    uint8_t lsb = (uint8_t)(stepData.pitchBend & 0xFF);
+    uint8_t msb = (uint8_t)((stepData.pitchBend >> 8) & 0xFF);
+    pitchBend[0] = 224;
+    pitchBend[1] = lsb;
+    pitchBend[2] = msb;
+    midiOutputCapture(AUEventSampleTimeImmediate, 0, 3, pitchBend);
 
     // Step forward.
     double beatRate = getBeatRate([(NSNumber *)_beatRateIndex.objectValue intValue]);
@@ -320,7 +344,7 @@ double getBeatRate(int index) {
 
     // Craete playing note data.
     PlayingNote playingNote;
-    playingNote.midiNote = midiNote;
+    playingNote.midiNote = stepData.midiNote;
     playingNote.stopingBeatPosition = _nextBeatPosition;
     _playingNotes.push_back(playingNote);
 

@@ -27,8 +27,8 @@
 		B201258621469FD5006E9D1F /* AEMainThreadEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257C21469FD5006E9D1F /* AEMainThreadEndpoint.m */; };
 		B201258721469FD5006E9D1F /* AEAudioThreadEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B201257E21469FD5006E9D1F /* AEAudioThreadEndpoint.m */; };
 		B201258821469FE4006E9D1F /* AEWeakRetainingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B201256D21469FD5006E9D1F /* AEWeakRetainingProxy.m */; };
-		B201258B2146AA6E006E9D1F /* GestureSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201258A2146AA6E006E9D1F /* GestureSlider.swift */; };
 		B24EB79C2178725A00D1D8CC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B24EB79B2178725A00D1D8CC /* libc++.tbd */; };
+		B27F039A217F3E56004755C3 /* SequencerStepData.m in Sources */ = {isa = PBXBuildFile; fileRef = B27F0399217F3E56004755C3 /* SequencerStepData.m */; };
 		BD6FA243728BF2ACC6C70ABF /* Pods_AUv3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DA95E7AF567524597D57A4 /* Pods_AUv3.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,8 +93,9 @@
 		B201257C21469FD5006E9D1F /* AEMainThreadEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMainThreadEndpoint.m; sourceTree = "<group>"; };
 		B201257D21469FD5006E9D1F /* AEArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEArray.h; sourceTree = "<group>"; };
 		B201257E21469FD5006E9D1F /* AEAudioThreadEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAudioThreadEndpoint.m; sourceTree = "<group>"; };
-		B201258A2146AA6E006E9D1F /* GestureSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GestureSlider.swift; path = AUv3/GestureSlider.swift; sourceTree = SOURCE_ROOT; };
 		B24EB79B2178725A00D1D8CC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B27F0398217F3E56004755C3 /* SequencerStepData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequencerStepData.h; sourceTree = "<group>"; };
+		B27F0399217F3E56004755C3 /* SequencerStepData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequencerStepData.m; sourceTree = "<group>"; };
 		D8DA95E7AF567524597D57A4 /* Pods_AUv3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUv3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32F6FF57736E811FC8A3E51 /* Pods-BasicSequencerAUv3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicSequencerAUv3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicSequencerAUv3/Pods-BasicSequencerAUv3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,7 +169,8 @@
 			children = (
 				B201255B21469DA0006E9D1F /* AUv3AudioUnit.h */,
 				B201255C21469DA0006E9D1F /* AUv3AudioUnit.mm */,
-				B201258A2146AA6E006E9D1F /* GestureSlider.swift */,
+				B27F0398217F3E56004755C3 /* SequencerStepData.h */,
+				B27F0399217F3E56004755C3 /* SequencerStepData.m */,
 				B201255E21469DA0006E9D1F /* AudioUnitViewController.swift */,
 				B201256021469DA0006E9D1F /* MainInterface.storyboard */,
 				B201256321469DA0006E9D1F /* Info.plist */,
@@ -392,11 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27F039A217F3E56004755C3 /* SequencerStepData.m in Sources */,
 				B201258421469FD5006E9D1F /* AETime.m in Sources */,
 				B201255D21469DA0006E9D1F /* AUv3AudioUnit.mm in Sources */,
 				B201258221469FD5006E9D1F /* AEArray.m in Sources */,
 				B201258121469FD5006E9D1F /* AEManagedValue.m in Sources */,
-				B201258B2146AA6E006E9D1F /* GestureSlider.swift in Sources */,
 				B201257F21469FD5006E9D1F /* AEWeakRetainingProxy.m in Sources */,
 				B201258721469FD5006E9D1F /* AEAudioThreadEndpoint.m in Sources */,
 				B201258621469FD5006E9D1F /* AEMainThreadEndpoint.m in Sources */,

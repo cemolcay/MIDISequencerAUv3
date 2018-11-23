@@ -15,5 +15,6 @@
 @property (nonatomic, retain) AEArray *sequencer;
 @property (nonatomic, retain) AEManagedValue *sequencerStepIndex;
 @property (nonatomic, retain) AEManagedValue *beatRateIndex;
+@property (nonatomic, retain) AEManagedValue *arpeggiatorTypeIndex;
 
 @end
